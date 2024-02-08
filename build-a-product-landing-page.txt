@@ -1,0 +1,267 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <header id="header">
+        <div class="logo">
+          <img
+            id="header-img"
+            src="https://scontent.fbzy1-1.fna.fbcdn.net/v/t39.30808-6/355889748_578461784435696_8180043977581385145_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=V_vaupaBJGIAX94OKfM&_nc_ht=scontent.fbzy1-1.fna&oh=00_AfDvkWtwvl6aOwsp0DpYbRgZcuhan8GjdtzMeL3W2vwfWw&oe=65C6819B"
+            width="200px"
+            alt="miafruct logo"
+          />
+        </div>
+      
+        <nav id="nav-bar">
+          <ul>
+            <li><a class="nav-link" href="#our-farm">Our Farm</a></li>
+            <li><a class="nav-link" href="#berries">Berries</a></li>
+            <li><a class="nav-link" href="#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <div class="container">
+      <section id="our-farm">
+        <div class="grid">
+            <div class="icon">
+              <i class="text-for-description"></i>
+            </div>
+            <div class="description">
+              <h1>MIAFRUCT: FRESHEST BERRIES FOR YOU</h1>
+              <h2>Our Farm</h2>
+                <p>
+                  A 6 hectare family farm in the south of Moldova, we grow berries with love and dedication. 100% natural and nutritious.
+                </p>
+            </div>
+        </div>
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/4tX-Vd223Lg?si=52sqQAOQsr8xM0x-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+      
+      <section id="berries">
+        <div class="product" id="blackberry">
+          <div class="level"><h2>Blackberry</h2></div>
+          <h3>Coming soon</h3>
+          <ol>
+            <li>50 lei/kg</li>
+            <li>min. order of 4kg</li>
+            <li>aromatic and juicy</li>
+          </ol>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="product" id="juneberry">
+          <div class="level"><h2>Juneberry</h2></div>
+          <h3>Available now</h3>
+          <ol>
+            <li>50 lei/kg</li>
+            <li>min. order of 4kg</li>
+            <li>aromatic, best for jams</li>
+          </ol>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="product" id="lonicera">
+          <div class="level"><h2>Lonicera</h2></div>
+          <h3>Available now</h3>
+          <ol>
+            <li>100 lei/kg</li>
+            <li>min. order of 2kg</li>
+            <li>nutritious and delicious</li>
+          </ol>
+          <button class="btn">Buy</button>
+        </div>
+      </section>
+    
+      <section id="contact-us">
+        <h2>Contact Us</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input
+            id="phone-number"
+            name="phone-number"
+            placeholder="Enter phone number"
+            type="number"
+          >
+            Phone Number
+          </input>
+          <br>
+          <input
+            id="email"
+            name="email"
+            placeholder="Enter Email"
+            type="email"
+          >
+            Email
+          </input>
+          <br>
+          <input
+            type="submit"
+            id="submit"
+          >
+          </input>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+/*element styling*/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+/*if Lato font is not imported or unavailable in browser, sans-serif will be fallback value */
+
+* {
+  margin: 0;
+  padding: 0; /*removes <ol> list numbering */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: green;
+  font-size: 2em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/*end of element styling*/
+
+/*classes styling*/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  /*styling buttons*/
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 3px rgb(224, 224, 224) solid;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed; 
+  /*fixed the logo on top, and navbar follows*/
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  /*fixed the nav bar on top*/
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+@media (min-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  /*fixes logo to stop navbar from overlapping with it*/
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo img {
+    margin: 0 auto;
+  }
+    /*fixes logo to stop navbar from overlapping with it*/
+ 
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  nav li {
+    padding-bottom: 5px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+nav ul {
+  width: 35vw;
+  /*spanning the space for each elememt*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+** end of undefined **
+
